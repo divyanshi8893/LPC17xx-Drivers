@@ -139,7 +139,7 @@ uint16_t I2C_TSC2004_Read_Word (uint8_t Command)
 	rxsetup.sl_addr7bit = TSC2004_ID;
 	rxsetup.tx_data = &Command;	// Get address to read at writing address
 	rxsetup.tx_length = 1;
-	rxsetup.rx_data = I2C_Rx_Buf;
+	rxsetup.rx_data = I2C_Rx_Buf;  // Pass Receive Buffer
 	rxsetup.rx_length = 2;
 	rxsetup.retransmissions_max = 3;
 
